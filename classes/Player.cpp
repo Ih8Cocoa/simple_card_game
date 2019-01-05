@@ -39,7 +39,8 @@ void Player::fillCards() {
 
 int Player::getTotalPoints() const {
     int total = card1->getPoints() + card2->getPoints() + card3->getPoints();
-    return total > 10 ? total % 10 : total;
+    int score = total % 10;
+    return score == 0 ? 10 : score;
 }
 
 int Player::getTotalSuitPoint() const {
