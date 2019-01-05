@@ -73,3 +73,7 @@ bool Player::canContinue() const {
 long long Player::getCash() const {
     return cash;
 }
+
+string Player::getName() const {
+    return name;
+}

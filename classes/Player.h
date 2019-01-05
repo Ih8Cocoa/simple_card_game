@@ -25,5 +25,6 @@ public:
     string displayCards() const;
     bool canContinue() const;
     long long getCash() const;
+    string getName() const;
 };
 

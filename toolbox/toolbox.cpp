@@ -54,14 +54,14 @@ unsigned int getInputUInt(string const& question) {
 
 void newGame(Player& human, Player& computer, bool isStartGame, unsigned int deltaCash) {
     cout << "GAME RESULT: " << endl;
-    cout << "Your cards: " << endl;
+    cout << human.getName() << "'s cards: " << endl;
     if (!isStartGame) {
         human.fillCards();
         computer.fillCards();
     }
     cout << human.displayCards() << endl;
     cout << "Total points: " << human.getTotalPoints() << endl << endl;
-    cout << "Computer cards:" << endl;
+    cout << "Computer's cards:" << endl;
     cout << computer.displayCards() << endl;
     cout << "Total points: " << computer.getTotalPoints() << endl << endl;
     auto gameResult = result(human, computer);
