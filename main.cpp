@@ -34,7 +34,12 @@ int main() {
             break;
         }
         newGame(*you, *him, isStartGame, deltaCash);
+        if (isStartGame) {
+            cin.get();
+            isStartGame = false;
+        }
         input = getInputUInt("Would you like to continue? (Input 0 to stop)");
+        cout << "\033[2J\033[1;1H";
     }
 
 }
